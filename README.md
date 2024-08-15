@@ -1,8 +1,8 @@
 **Project Name:** URL Shortener
-
+**Project Description:** This project uses shortId module to genrate shortid and gives user a new short url
 **Technology used:** 
 Node js with Express framework
-MongoDB- I used mongoose to get connection with mongoDB database
+**Database:**MongoDB- I used mongoose to get connection with mongoDB database
 
 external library: shortId (to get random letters)
 
