@@ -4,6 +4,7 @@ const {urlModel}=require("../models/url")
 
 const handlenewShortUrl=async(req,res)=>{
     const body=req.body;
+    console.log(body)
     if(!body.url){
         return res.status(400).json({error:"Url is required"})
     }
@@ -13,7 +14,8 @@ const handlenewShortUrl=async(req,res)=>{
         urlRedirect:body.url,
         visitHistory:[]
     })
-    return res.json({"shortId":shortID})
+    return res.render("home",{shortId:shortID})
+    
 }
 
 const handleRedirectUrl=async(req,res)=>{

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h2>This is a URL Shortner App</h2>
+    <p>Welcome to the website</p>
+
+    <form method="POST" action="/URL">
+    <label>Enter your website url:</label>
+    <input type="text" name="url" placeholder="www.example.com"/>
+    <button type="submit">Generate URL</button>
+  </form>
+    <% if(locals.shortId){ %>
+      <p>URL Generated :http://localhost:8000/URL/<%= shortId %></p>
+      <% } %>
+  </div>
+</main>
+
+
+
+</body>
+</html>
