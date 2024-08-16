@@ -8,6 +8,11 @@ external library: shortId (to get random letters)
 
 **Routes:**
 
+**GET: http://localhost:8000/**
+You will get a web page which contain a web form to get your URL and give you a short URL for your website
+
+![image](https://github.com/user-attachments/assets/7a087406-370d-4f84-b27a-38e1b667b143)
+
 **Post: http://localhost:8000/URL/**
 add object in body with url attribute ex. {url:"www.google.com"}  will give you a shortId
 
