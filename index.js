@@ -1,14 +1,21 @@
 const express=require('express');
-const urlRouter=require("./routes/url")
 const mongoDbConnect=require("./connect.js")
+const urlRouter=require("./routes/url")
 const staticRouter=require("./routes/staticRouter.js")
+const userRouter=require("./routes/user.js")
+const cookieParser=require("cookie-parser")
+const {restrictedToLoginUserOnly} =require("./middleware/auth.js")
 const path=require("path");
 
 const app=express();
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-app.use("/URL",urlRouter)
+app.use(cookieParser())
+
+//Setting routers
+app.use("/URL",restrictedToLoginUserOnly,urlRouter)
 app.use("/",staticRouter);
+app.use("/user",userRouter)
 
 //setting ejs engine
 app.set('view engine','ejs');

@@ -4,11 +4,13 @@ const {urlModel}=require("../models/url")
 
 const handlenewShortUrl=async(req,res)=>{
     const body=req.body;
-    console.log(body)
+   
     if(!body.url){
         return res.status(400).json({error:"Url is required"})
     }
     const shortID=shortId.generate();
+   
+   
     await urlModel.create({
         shortId:shortID,
         urlRedirect:body.url,
