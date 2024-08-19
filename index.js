@@ -3,7 +3,7 @@ const mongoDbConnect=require("./connect.js")
 const urlRouter=require("./routes/url")
 const staticRouter=require("./routes/staticRouter.js")
 const userRouter=require("./routes/user.js")
-const cookieParser=require("cookie-parser")
+
 const session=require("express-session")
 const {restrictedToLoginUserOnly} =require("./middleware/auth.js")
 const path=require("path");
@@ -11,7 +11,7 @@ const path=require("path");
 const app=express();
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-app.use(cookieParser())
+
 app.use(session({
     secret: 'Mangesh@19',
     resave: false,
