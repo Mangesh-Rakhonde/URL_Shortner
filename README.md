@@ -13,6 +13,9 @@ You will get a web page which contain a web form to get your URL and give you a 
 
 ![image](https://github.com/user-attachments/assets/7a087406-370d-4f84-b27a-38e1b667b143)
 
+**
+User will only access below routes("/URL") if he is logged in
+I have added authentication using sessionId and cookies**
 **Post: http://localhost:8000/URL/**
 add object in body with url attribute ex. {url:"www.google.com"}  will give you a shortId
 
@@ -31,3 +34,10 @@ ex:
         }
     ]
 }
+
+Sign Up Form:
+![image](https://github.com/user-attachments/assets/d9c485e5-70bc-43a6-97e8-1c881a28703f)
+
+Sign In Form:
+![image](https://github.com/user-attachments/assets/7c067d5f-41c0-4fb8-88af-500d1df78653)
+
